@@ -36,3 +36,7 @@ Thumbs.db
 # Editor files
 .vscode/
 .idea/
+
+
+# varcel service
+vercel.json
