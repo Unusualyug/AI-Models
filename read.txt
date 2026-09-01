@@ -61,3 +61,5 @@ Git → tracks changes in your code
 Git LFS → handles large files like your best_model.pth
 
 GitHub has a strict limit of 100 MB per individual file, but the total push size can be up to 2 GB.
+
+Note ==> Git LFS stores the large file separately from your normal Git repository data, but it is still part of your GitHub project.
