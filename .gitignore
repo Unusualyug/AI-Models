@@ -1,42 +1,60 @@
+# =========================
 # Python
+# =========================
 __pycache__/
 *.py[cod]
 *.pyo
-.venv/
+
+# Virtual environments
 venv/
-backend/venv/
+.venv/
+env/
+ENV/
 
-# Node/frontend
+# =========================
+# Node
+# =========================
 node_modules/
-dist/
-frontend/node_modules/
-frontend/dist/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
 
-# Datasets and temporary files
-dataset/
-raw_data/
-evaluation_results/
-inference_results/
-
-# Model checkpoints and generated metadata
-*.pth
-*.pt
-*.onnx
-backend/app/model_metadata.json
-
-# Environment and secrets
+# =========================
+# Environment variables
+# =========================
 .env
 .env.*
 !.env.example
 
-# Operating-system files
+# =========================
+# Datasets / raw data
+# =========================
+dataset/
+raw_data/
+
+# =========================
+# Generated results
+# =========================
+inference_results/
+evaluation_results/
+
+# =========================
+# IDE / OS
+# =========================
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
 
-# Editor files
-.vscode/
-.idea/
+# =========================
+# Python cache
+# =========================
+.pytest_cache/
+.mypy_cache/
 
+# =========================
+# Temporary files
+# =========================
+*.log
+*.tmp
 
-# varcel service
-vercel.json
