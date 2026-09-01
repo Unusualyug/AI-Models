@@ -1,0 +1,55 @@
+1. Evaluate the Model on Test Data
+Run a proper test/inference evaluation to see how the model performs on unseen data. Generate predictions and compute metrics like:
+Confusion Matrix
+Precision, Recall, F1-Score (per class: fracture vs no-fracture)
+ROC Curve / AUC score
+2. Test Inference on Sample Images
+Run the saved best_model.pth on some sample X-ray images to verify it works correctly end-to-end and produces sensible predictions with confidence scores.
+3. Integrate with the Backend API
+Since your model is saved in backend/app/best_model.pth, the next step is to wire it into your FastAPI backend so the web frontend can send an X-ray image and get a prediction back (fracture/no-fracture + confidence).
+4. Build/Connect the Frontend
+Make sure your web UI has an image upload component that sends the image to the backend API and displays the result visually.
+5. Test the Full Pipeline
+End-to-end test: upload image → model predicts → result displayed to user.
+
+what will happen if i perform these task in my project, please tell me in hsort an simple maner
+
+
+
+*************************************************************************************
+
+Then Run
+Backend (Terminal 1):
+
+Bash
+    cd backend
+    uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+Frontend (Terminal 2):
+
+Bash
+    cd frontend
+    npm install
+    npm run dev
+
+*************************************************************************************
+
+
+1. Collect more images from different sources
+2. Put them in "dataset/train/fractured/" and "dataset/train/no_fractured/"
+3. Also add some to dataset/val/ folders
+4. Run python train.py again
+5. Test with python test_model.py
+
+After training finishes, run the evaluation script to obtain the formal performance results: python evaluate_safe.py
+
+
+Step 1: Add new images → python separate_data.py
+Step 2: Train model    → python train.py
+Step 3: Start backend  → cd backend && python -m uvicorn app.main:app --reload
+Step 4: Start frontend → cd frontend && npm run dev
+Step 5: Open browser   → http://localhost:5173
+
+
+
+*************************************************************************************

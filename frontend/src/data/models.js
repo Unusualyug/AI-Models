@@ -1,0 +1,32 @@
+export const models = [
+  {
+    id: "fracture-detection",
+    name: "Fracture Detection",
+    description: "Detect fractures in X-ray images using deep learning",
+    icon: "🦴",
+    color: "from-blue-500 to-cyan-500",
+    accuracy: "96.50%",
+    apiUrl: "http://localhost:8000/predict",
+    status: "active",
+  },
+  {
+    id: "tumor-detection",
+    name: "Tumor Detection",
+    description: "Detect tumors in MRI/CT scan images",
+    icon: "🧠",
+    color: "from-purple-500 to-pink-500",
+    accuracy: "Coming Soon",
+    apiUrl: "",
+    status: "coming-soon",
+  },
+  {
+    id: "pneumonia-detection",
+    name: "Pneumonia Detection",
+    description: "Detect pneumonia from chest X-ray images",
+    icon: "🫁",
+    color: "from-green-500 to-teal-500",
+    accuracy: "Coming Soon",
+    apiUrl: "",
+    status: "coming-soon",
+  },
+];
