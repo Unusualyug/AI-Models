@@ -53,3 +53,11 @@ Step 5: Open browser   → http://localhost:5173
 
 
 *************************************************************************************
+
+Note ==> our model is more has more than 90 MB so we create dthe git LFS. 
+Git LFS is a feature/service that works with GitHub for handling large files.
+GitHub → stores your code and project
+Git → tracks changes in your code
+Git LFS → handles large files like your best_model.pth
+
+GitHub has a strict limit of 100 MB per individual file, but the total push size can be up to 2 GB.
