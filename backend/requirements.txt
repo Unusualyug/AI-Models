@@ -13,5 +13,5 @@ python-multipart==0.0.6
 torch==2.1.2
 torchvision==0.16.2
 pillow==10.2.0
-numpy
+numpy==1.26.4
 opencv-python-headless==4.9.0.80
