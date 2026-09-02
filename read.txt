@@ -63,3 +63,8 @@ Git LFS → handles large files like your best_model.pth
 GitHub has a strict limit of 100 MB per individual file, but the total push size can be up to 2 GB.
 
 Note ==> Git LFS stores the large file separately from your normal Git repository data, but it is still part of your GitHub project.
+
+______________________________________________________________________________________________________
+
+Vercel is optimized for serving static files (HTML/CSS/JS) fast, worldwide, via a CDN — great for websites, useless for running Python/PyTorch
+Render is built to run a persistent server process — great for your Python backend, overkill/awkward for just serving static files
