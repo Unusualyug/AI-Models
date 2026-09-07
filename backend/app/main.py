@@ -434,13 +434,28 @@ from .gradcam import GradCAM
 
 app = FastAPI(title="Fracture Detection API", version="1.1.0")
 
+allowed_origins = [
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "https://ai-models-x6wu-ii4djy63a-yuglakhani34-4045s-projects.vercel.app",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
+    allow_origins=allowed_origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
-)
+ )
+
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["*"],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
 
 ALLOWED_TYPES = {
     "image/jpeg",
