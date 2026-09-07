@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+// const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_URL =
+  import.meta.env.VITE_API_URL || "https://ai-models-1-c0w7.onrender.com";
 
 const ImageUploader = () => {
   const [selectedFile, setSelectedFile] = useState(null);
